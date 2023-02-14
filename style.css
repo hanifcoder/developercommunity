@@ -1,0 +1,206 @@
+:root {
+    --clr-primary-400: hsl(257, 40%, 49%);
+    --clr-primary-300: hsl(300, 69%, 71%);
+
+    --ff-body: "Open Sans", sans-serif;
+    --ff-heading: "Poppins", sans-serif;
+
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-600: 1.563rem;
+}
+
+/* modified andy bell css reset */
+
+/* // https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Main Style */
+
+body {
+    background: var(--clr-primary-400) url(/images/bg-mobile.svg) no-repeat;
+}
+
+header,
+main,
+footer {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+main {
+    margin-bottom: 60px;
+}
+
+.illustration-section {
+    padding: 0 10px;
+    margin-bottom: 60px;
+}
+
+.text-section {
+    color: white;
+    text-align: center;
+}
+
+.text-section h1 {
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-600);
+    margin-bottom: 30px;
+}
+
+.text-section p {
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-400);
+    margin-bottom: 30px;
+}
+
+.text-section button {
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-300);
+    color: var(--clr-primary-400);
+    border: none;
+    background: white;
+    padding: 10px 80px;
+    border-radius: 40px;
+    box-shadow: 0px 15px 10px -15px #4b2f77;
+}
+.text-section button:hover {
+    background: var(--clr-primary-300);
+    color: white;
+}
+
+footer {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.icon-circle {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 23.5em) {
+    body {
+        background: var(--clr-primary-400) url(/images/bg-desktop.svg);
+    }
+}
+
+@media (min-width: 37.5625em) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main > * {
+        flex: 1;
+    }
+
+    main .illustration-section {
+        margin-bottom: 0;
+    }
+
+    footer {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: auto;
+        background: rgb(238, 238, 238);
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+}
